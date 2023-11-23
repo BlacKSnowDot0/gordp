@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 )
 
 // encryptionMethod
@@ -31,7 +31,7 @@ const (
 type ServerSecurityData struct {
 	EncryptionMethod  uint32
 	EncryptionLevel   uint32
-	ServerRandomLen   uint32 //0x00000020
+	ServerRandomLen   uint32 // 0x00000020
 	ServerCertLen     uint32
 	ServerRandom      []byte
 	ServerCertificate ServerCertificate

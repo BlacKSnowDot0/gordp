@@ -1,8 +1,8 @@
-package gordp
+package conn
 
 import (
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/pdu/mcsPdu"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/pdu/mcsPdu"
 )
 
 func (c *Client) basicSettingsExchange() {

@@ -2,8 +2,8 @@ package mcs
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/proto/mcs/per"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/proto/mcs/per"
 	"io"
 )
 

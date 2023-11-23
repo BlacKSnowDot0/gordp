@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 )
 
 type UpdatePDU interface {
@@ -24,12 +24,12 @@ type TsFpUpdatePDU struct {
 func (p *TsFpUpdatePDU) iPDU() {}
 
 func (p *TsFpUpdatePDU) Serialize() []byte {
-	//TODO implement me
+	// TODO implement me
 	panic("implement me")
 }
 
 func (p *TsFpUpdatePDU) Type() uint16 {
-	//TODO implement me
+	// TODO implement me
 	panic("implement me")
 }
 
@@ -43,7 +43,7 @@ func (p *TsFpUpdatePDU) Read(r io.Reader) PDU {
 	}
 
 	data := core.ReadBytes(r, int(p.Length))
-	//glog.Debugf("fastpath pdu data: %v - %x", len(data), data)
+	// glog.Debugf("fastpath pdu data: %v - %x", len(data), data)
 
 	glog.Debugf("updateCode: %v", p.Header.UpdateCode)
 	switch p.Header.UpdateCode {

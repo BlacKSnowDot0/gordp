@@ -1,7 +1,7 @@
 package capability
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -10,7 +10,7 @@ import (
 type TsPointerCapabilitySet struct {
 	ColorPointerFlag      uint16
 	ColorPointerCacheSize uint16
-	//PointerCacheSize      uint16 // only server need
+	// PointerCacheSize      uint16 // only server need
 }
 
 func (c *TsPointerCapabilitySet) Type() uint16 {

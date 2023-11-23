@@ -1,7 +1,7 @@
 package licPdu
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -36,7 +36,7 @@ const (
 type LicensingErrorMessage struct {
 	DwErrorCode        uint32
 	DwStateTransaction uint32
-	//BbErrorInfo        []byte
+	// BbErrorInfo        []byte
 }
 
 func (m *LicensingErrorMessage) Read(r io.Reader) {

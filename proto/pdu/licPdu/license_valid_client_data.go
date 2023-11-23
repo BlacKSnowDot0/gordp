@@ -1,7 +1,7 @@
 package licPdu
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 

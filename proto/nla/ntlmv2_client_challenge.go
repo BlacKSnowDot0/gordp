@@ -2,7 +2,7 @@ package nla
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 )
 
 // NTLMv2ClientChallenge

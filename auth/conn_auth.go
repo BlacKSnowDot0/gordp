@@ -1,10 +1,10 @@
-package gordp
+package auth
 
 import (
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/nla"
-	"github.com/GoFeGroup/gordp/proto/pdu/connPdu"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/nla"
+	"github.com/Hypdncy/gordp/proto/pdu/connPdu"
 )
 
 func (c *Client) switchNLA() {

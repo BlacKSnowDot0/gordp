@@ -2,9 +2,9 @@ package t128
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/capability"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/capability"
 	"io"
 )
 
@@ -12,10 +12,10 @@ import (
 // https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/4e9722c3-ad83-43f5-af5a-529f73d88b48
 type TsConfirmActivePduData struct {
 	SharedId                   uint32
-	OriginatorId               uint16 //This field MUST be set to the server channel ID (0x03EA).
+	OriginatorId               uint16 // This field MUST be set to the server channel ID (0x03EA).
 	LengthSourceDescriptor     uint16
 	LengthCombinedCapabilities uint16
-	SourceDescriptor           []byte //A variable-length array of bytes containing a source descriptor
+	SourceDescriptor           []byte // A variable-length array of bytes containing a source descriptor
 	NumberCapabilities         uint16
 	Pad2Octets                 uint16
 	CapabilitySets             []capability.TsCapsSet

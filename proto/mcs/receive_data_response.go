@@ -3,10 +3,10 @@ package mcs
 import (
 	"bytes"
 	"fmt"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/mcs/per"
-	"github.com/GoFeGroup/gordp/proto/x224"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/mcs/per"
+	"github.com/Hypdncy/gordp/proto/x224"
 	"io"
 )
 

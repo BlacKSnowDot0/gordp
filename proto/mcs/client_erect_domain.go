@@ -2,7 +2,7 @@ package mcs
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/proto/mcs/per"
+	"github.com/Hypdncy/gordp/proto/mcs/per"
 	"io"
 )
 

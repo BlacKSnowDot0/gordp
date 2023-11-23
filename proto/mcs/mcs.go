@@ -1,7 +1,7 @@
 package mcs
 
 import (
-	"github.com/GoFeGroup/gordp/proto/mcs/per"
+	"github.com/Hypdncy/gordp/proto/mcs/per"
 	"io"
 )
 
@@ -34,9 +34,9 @@ func WriteMcsPduHeader(w io.Writer, pduType, option uint8) {
 func ReadMcsPduHeader(r io.Reader) uint8 {
 	options := per.ReadChoice(r)
 	return options >> 2
-	//core.ThrowIf((options>>2) != pduType, "invalid pdu type")
+	// core.ThrowIf((options>>2) != pduType, "invalid pdu type")
 }
 
-//func Write(w io.Writer, channelId uint16, data []byte) {
+// func Write(w io.Writer, channelId uint16, data []byte) {
 //
-//}
+// }

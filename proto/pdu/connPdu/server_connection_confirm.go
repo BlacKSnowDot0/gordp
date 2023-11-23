@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/proto/x224"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/proto/x224"
 )
 
 // ServerConnectionConfirmPDU

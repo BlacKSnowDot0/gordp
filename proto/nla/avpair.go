@@ -2,7 +2,7 @@ package nla
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -61,7 +61,7 @@ func ReadAvPairs(data []byte) AVPairs {
 	for r.Len() > 0 {
 		avPair := AVPair{}
 		avPair.Read(r)
-		//glog.Debugf("avPair: id: %v, len: %v", avPair.Must.Id, avPair.Must.Len)
+		// glog.Debugf("avPair: id: %v, len: %v", avPair.Must.Id, avPair.Must.Len)
 		avPairs = append(avPairs, avPair)
 		if avPair.Must.Id == MsvAvEOL {
 			break

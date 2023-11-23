@@ -1,7 +1,7 @@
 package nla
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -79,7 +79,7 @@ func (m *NegotiateMessage) Write(w io.Writer) {
 	req.Write(w)
 }
 
-//func (m *NegotiateMessage) Read(r io.Reader) error {
+// func (m *NegotiateMessage) Read(r io.Reader) error {
 //	treq := &TSRequest{}
 //	if data, err := (&core.Asn1{}).Read(r); err != nil {
 //		return err
@@ -89,4 +89,4 @@ func (m *NegotiateMessage) Write(w io.Writer) {
 //		return fmt.Errorf("invalid TsRequest from upstream, NegoTokens = nil")
 //	}
 //	return nil
-//}
+// }

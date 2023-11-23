@@ -1,20 +1,20 @@
 package mcs
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
 // UserDataHeader Type
 const (
-	//client -> server
+	// client -> server
 	CS_CORE     = 0xC001
 	CS_SECURITY = 0xC002
 	CS_NET      = 0xC003
 	CS_CLUSTER  = 0xC004
 	CS_MONITOR  = 0xC005
 
-	//server -> client
+	// server -> client
 	SC_CORE           = 0x0C01
 	SC_SECURITY       = 0x0C02
 	SC_NET            = 0x0C03

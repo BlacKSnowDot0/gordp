@@ -2,8 +2,8 @@ package t128
 
 import (
 	"fmt"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 	"io"
 )
 
@@ -46,26 +46,26 @@ func (d *TsBitmapData) Read(r io.Reader) {
 			d.BitmapComprHdr = (&TsCdHeader{}).Read(r)
 			glog.Debugf("compressionHeader: %+v", d.BitmapComprHdr)
 		}
-		//glog.Debugf("[!] compression = true")
+		// glog.Debugf("[!] compression = true")
 	}
 	if d.BitmapLength > 0 {
 		d.BitmapDataStream = core.ReadBytes(r, int(d.BitmapLength))
 	}
-	//glog.Debugf("bitmap: %x", d.BitmapDataStream)
+	// glog.Debugf("bitmap: %x", d.BitmapDataStream)
 	glog.Debugf("[%v,%v,%v,%v],bpp: %v, len: %v", d.DestLeft, d.DestTop, d.Width, d.Height, d.BitsPerPixel, d.BitmapLength)
-	//core.ShowHex(d.BitmapDataStream)
-	//if len(d.BitmapDataStream) > 64 {
+	// core.ShowHex(d.BitmapDataStream)
+	// if len(d.BitmapDataStream) > 64 {
 	//	core.ShowHex(d.BitmapDataStream[:64])
-	//} else {
+	// } else {
 	//	core.ShowHex(d.BitmapDataStream)
-	//}
+	// }
 
 	// Just For Test
-	//if d.Flags&BITMAP_COMPRESSION != 0 && d.BitsPerPixel == 32 { // RDP6
+	// if d.Flags&BITMAP_COMPRESSION != 0 && d.BitsPerPixel == 32 { // RDP6
 	//	bmp := bitmap.NewBitMapFromRDP6(d.BitmapDataStream)
 	//	glog.Debugf("png: %x", bmp.ToPng())
-	//} else if d.Flags&BITMAP_COMPRESSION != 0 { // RLE
+	// } else if d.Flags&BITMAP_COMPRESSION != 0 { // RLE
 	//	bmp := bitmap.NewBitmapFromRLE(d.Width, d.Height, d.BitsPerPixel, d.BitmapDataStream)
 	//	glog.Debugf("png: %x", bmp.ToPng())
-	//}
+	// }
 }

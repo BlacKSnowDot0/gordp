@@ -1,7 +1,7 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -18,7 +18,7 @@ func (t *TsSetErrorInfoPDU) Read(r io.Reader) DataPDU {
 }
 
 func (t *TsSetErrorInfoPDU) Serialize() []byte {
-	//TODO implement me
+	// TODO implement me
 	panic("implement me")
 }
 

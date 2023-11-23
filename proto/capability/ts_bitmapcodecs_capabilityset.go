@@ -1,7 +1,7 @@
 package capability
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -32,7 +32,7 @@ func (c *TsBitmapCodecsCapabilitySet) Type() uint16 {
 
 func (c *TsBitmapCodecsCapabilitySet) Read(r io.Reader) TsCapsSet {
 	c.SupportedBitmapCodecs.Read(r)
-	//core.ReadLE(r,c)
+	// core.ReadLE(r,c)
 	return c
 }
 

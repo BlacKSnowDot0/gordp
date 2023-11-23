@@ -1,7 +1,7 @@
-package gordp
+package conn
 
 import (
-	"github.com/GoFeGroup/gordp/proto/t128"
+	"github.com/Hypdncy/gordp/proto/t128"
 )
 
 func (c *Client) capabilitiesExchange() {

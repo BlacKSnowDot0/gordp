@@ -3,7 +3,7 @@ package t128
 import (
 	"bytes"
 
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 )
 
 // TsFpInputPdu
@@ -17,16 +17,16 @@ type TsFpInputPdu struct {
 	FpInputEvents   []TsFpInputEvent // An array of Fast-Path Input Event (section 2.2.8.1.2.2)
 }
 
-//func (pdu *TsFpInputPdu) iDataPDU() {}
+// func (pdu *TsFpInputPdu) iDataPDU() {}
 //
-//func (pdu *TsFpInputPdu) Read(r io.Reader) DataPDU {
+// func (pdu *TsFpInputPdu) Read(r io.Reader) DataPDU {
 //	//TODO implement me
 //	panic("implement me")
-//}
+// }
 //
-//func (pdu *TsFpInputPdu) Type2() uint8 {
+// func (pdu *TsFpInputPdu) Type2() uint8 {
 //	return PDUTYPE2_INPUT
-//}
+// }
 
 // SlowPath Input PDU
 // input_send_mouse_event
@@ -80,7 +80,7 @@ func (pdu *TsFpInputPdu) Serialize() []byte {
 	pdu.Header.Write(buff)
 
 	core.WriteBE(buff, (pdu.Length+3)|0x8000) // copy from FreeRDP
-	//per.WriteLength(buff, int(pdu.Length))
+	// per.WriteLength(buff, int(pdu.Length))
 	buff.Write(eventsData)
 
 	return buff.Bytes()

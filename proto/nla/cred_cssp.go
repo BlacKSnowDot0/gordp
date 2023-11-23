@@ -4,8 +4,8 @@ package nla
 
 import (
 	"encoding/asn1"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 	"io"
 )
 
@@ -103,27 +103,27 @@ func (req *TSRequest) Write(w io.Writer) {
 	core.WriteFull(w, data)
 }
 
-//func EncodeDERTRequest(msgs []Message, authInfo []byte, pubKeyAuth []byte) ([]byte, error) {
+// func EncodeDERTRequest(msgs []Message, authInfo []byte, pubKeyAuth []byte) ([]byte, error) {
 //	req := (&TSRequest{Version: 2}).SetMessages(msgs).SetAuthInfo(authInfo).SetPubKeyAuth(pubKeyAuth)
 //	return asn1.Marshal(*req)
-//}
+// }
 //
-//func DecodeDERTRequest(s []byte) (*TSRequest, error) {
+// func DecodeDERTRequest(s []byte) (*TSRequest, error) {
 //	treq := &TSRequest{}
 //	_, err := asn1.Unmarshal(s, treq)
 //	return treq, err
-//}
+// }
 //
-//func EncodeDERTCredentials(domain, username, password []byte) ([]byte, error) {
+// func EncodeDERTCredentials(domain, username, password []byte) ([]byte, error) {
 //	if tpass, err := asn1.Marshal(TSPasswordCreds{domain, username, password}); err != nil {
 //		return nil, err
 //	} else {
 //		return asn1.Marshal(TSCredentials{1, tpass})
 //	}
-//}
+// }
 //
-//func DecodeDERTCredentials(s []byte) (*TSCredentials, error) {
+// func DecodeDERTCredentials(s []byte) (*TSCredentials, error) {
 //	tcre := &TSCredentials{}
 //	_, err := asn1.Unmarshal(s, tcre)
 //	return tcre, err
-//}
+// }

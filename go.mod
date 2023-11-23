@@ -1,7 +1,5 @@
-module github.com/GoFeGroup/gordp
+module github.com/Hypdncy/gordp
 
-go 1.19
+go 1.20
 
-require github.com/huin/asn1ber v0.0.0-20120622192748-af09f62e6358
-
-require golang.org/x/crypto v0.5.0
+require golang.org/x/crypto v0.15.0

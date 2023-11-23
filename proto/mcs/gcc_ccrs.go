@@ -3,8 +3,8 @@ package mcs
 import (
 	"bytes"
 	"fmt"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/proto/mcs/per"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/proto/mcs/per"
 	"io"
 )
 
@@ -21,9 +21,9 @@ func (res *GccConferenceCreateResponse) Read(r io.Reader) []byte {
 	}
 	_ = per.ReadLength(r)                             // ConnectData::connectPDU (OCTET_STRING)
 	_ = per.ReadChoice(r)                             // ConnectGCCPDU
-	_ = per.ReadInteger16(r, MCS_CHANNEL_USERID_BASE) //ConferenceCreateResponse::nodeID (UserID)
-	_ = per.ReadInteger(r)                            //ConferenceCreateResponse::tag (INTEGER)
-	enum := per.ReadEnumerated(r)                     //ConferenceCreateResponse::result (ENUMERATED)
+	_ = per.ReadInteger16(r, MCS_CHANNEL_USERID_BASE) // ConferenceCreateResponse::nodeID (UserID)
+	_ = per.ReadInteger(r)                            // ConferenceCreateResponse::tag (INTEGER)
+	enum := per.ReadEnumerated(r)                     // ConferenceCreateResponse::result (ENUMERATED)
 	core.ThrowIf(enum+1 > 16, fmt.Errorf("PER invalid data, expect %0#x < %0#x", enum, 16))
 	_ = per.ReadNumberOfSet(r) // number of UserData sets
 	_ = per.ReadChoice(r)      // UserData::value present + select h221NonStandard (1)

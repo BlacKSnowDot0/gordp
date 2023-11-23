@@ -3,8 +3,8 @@ package mcs
 import (
 	"io"
 
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 )
 
 // RSAPublicKey
@@ -52,16 +52,16 @@ func (p *ProprietaryServerCertificate) Read(r io.Reader) {
 	core.ReadLE(r, &p.PublicKeyBlob.DataLen) // 63 (BitLen/8-1)
 	core.ReadLE(r, &p.PublicKeyBlob.PubExp)  // 65537
 	p.PublicKeyBlob.Modulus = core.ReadBytes(r, int(p.PublicKeyBlob.KeyLen))
-	//core.ReadLE(r, &p.PublicKeyBlob.Modulus)
-	//core.ReadLE(r, &p.PublicKeyBlob.Padding)
-	//p.PublicKeyBlob.Padding = core.ReadBytes(r, int(8-p.PublicKeyBlob.KeyLen%8))
+	// core.ReadLE(r, &p.PublicKeyBlob.Modulus)
+	// core.ReadLE(r, &p.PublicKeyBlob.Padding)
+	// p.PublicKeyBlob.Padding = core.ReadBytes(r, int(8-p.PublicKeyBlob.KeyLen%8))
 
 	core.ReadLE(r, &p.SignatureBlobType) // 0x0008
 	core.ReadLE(r, &p.SignatureBlobLen)  // 72
 	glog.Debugf("%+v", p)
 	p.SignatureBlob = core.ReadBytes(r, int(p.SignatureBlobLen))
-	//p.Padding = core.ReadBytes(r, int(8-p.SignatureBlobLen%8))
+	// p.Padding = core.ReadBytes(r, int(8-p.SignatureBlobLen%8))
 
-	//core.ReadLE(r, &p.SignatureBlob)
-	//core.ReadLE(r, &p.Padding)
+	// core.ReadLE(r, &p.SignatureBlob)
+	// core.ReadLE(r, &p.Padding)
 }

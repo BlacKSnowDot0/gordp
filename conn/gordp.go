@@ -1,12 +1,12 @@
-package gordp
+package conn
 
 import (
 	"time"
 
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/bitmap"
-	"github.com/GoFeGroup/gordp/proto/t128"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/bitmap"
+	"github.com/Hypdncy/gordp/proto/t128"
 )
 
 type Option struct {
@@ -24,7 +24,7 @@ type Processor interface {
 type Client struct {
 	option Option
 
-	//conn   net.Conn // TCP连接
+	// conn   net.Conn // TCP连接
 	stream *core.Stream
 
 	// from negotiation
@@ -49,24 +49,28 @@ func NewClient(opt *Option) *Client {
 	return c
 }
 
-//func (c *Client) tcpConnect() {
+// func (c *Client) tcpConnect() {
 //	conn, err := net.DialTimeout("tcp", c.option.Addr, c.option.ConnectTimeout)
 //	core.ThrowError(err)
 //	c.conn = conn
-//}
+// }
 
 // Connect
 // https://www.cyberark.com/resources/threat-research-blog/explain-like-i-m-5-remote-desktop-protocol-rdp
-func (c *Client) Connect() error {
+func (c *Client) Connect(onlyAuth bool) error {
 	return core.Try(func() {
+		defer func() { c.Close() }()
 		c.stream = core.NewStream(c.option.Addr, c.option.ConnectTimeout)
 		c.negotiation()
-		c.basicSettingsExchange()
-		c.channelConnect()
-		c.sendClientInfo()
-		c.readLicensing()
-		c.capabilitiesExchange()
-		c.sendClientFinalization()
+		if !onlyAuth {
+			c.basicSettingsExchange()
+			c.channelConnect()
+			c.sendClientInfo()
+			c.readLicensing()
+			c.capabilitiesExchange()
+			c.sendClientFinalization()
+		}
+
 	})
 }
 

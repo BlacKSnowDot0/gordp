@@ -1,16 +1,16 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
 // Action
 const (
-	CTRLACTION_REQUEST_CONTROL = 0x0001 //Request control
-	CTRLACTION_GRANTED_CONTROL = 0x0002 //Granted control
-	CTRLACTION_DETACH          = 0x0003 //Detach
-	CTRLACTION_COOPERATE       = 0x0004 //Cooperate
+	CTRLACTION_REQUEST_CONTROL = 0x0001 // Request control
+	CTRLACTION_GRANTED_CONTROL = 0x0002 // Granted control
+	CTRLACTION_DETACH          = 0x0003 // Detach
+	CTRLACTION_COOPERATE       = 0x0004 // Cooperate
 )
 
 // TsControlPDU

@@ -1,8 +1,8 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 	"io"
 )
 
@@ -72,7 +72,7 @@ type TsShareDataHeader struct {
 	UncompressedLength uint16
 	PDUType2           uint8
 
-	//https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/9355a663-ef22-4431-afeb-d72ac68f25fd
+	// https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/9355a663-ef22-4431-afeb-d72ac68f25fd
 	CompressedType   uint8
 	CompressedLength uint16
 }

@@ -1,7 +1,7 @@
-package gordp
+package conn
 
 import (
-	"github.com/GoFeGroup/gordp/proto/pdu/licPdu"
+	"github.com/Hypdncy/gordp/proto/pdu/licPdu"
 )
 
 func (c *Client) sendClientInfo() {

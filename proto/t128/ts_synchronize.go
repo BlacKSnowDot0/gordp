@@ -1,7 +1,7 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -13,7 +13,7 @@ const (
 // https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/3fb4c95e-ad2d-43d1-a46f-5bd49418da49
 type TsSynchronizePduData struct {
 	MessageType uint16 // This field MUST be set to SYNCMSGTYPE_SYNC (1).
-	TargetUser  uint16 //A 16-bit, unsigned integer. The MCS channel ID of the target user.
+	TargetUser  uint16 // A 16-bit, unsigned integer. The MCS channel ID of the target user.
 }
 
 func (t *TsSynchronizePduData) Read(r io.Reader) DataPDU {

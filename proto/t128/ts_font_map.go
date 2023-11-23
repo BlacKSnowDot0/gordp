@@ -1,7 +1,7 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -21,7 +21,7 @@ func (t *TsFontMapPDU) Read(r io.Reader) DataPDU {
 }
 
 func (t *TsFontMapPDU) Serialize() []byte {
-	//TODO implement me
+	// TODO implement me
 	panic("implement me")
 }
 

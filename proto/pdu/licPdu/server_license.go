@@ -2,10 +2,10 @@ package licPdu
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/mcs"
-	"github.com/GoFeGroup/gordp/proto/sec"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/mcs"
+	"github.com/Hypdncy/gordp/proto/sec"
 	"io"
 )
 
@@ -18,7 +18,7 @@ type ServerLicensingPDU struct {
 }
 
 func (p *ServerLicensingPDU) Read(r io.Reader) {
-	//channelId, data := p.McsSDin.Read(r)
+	// channelId, data := p.McsSDin.Read(r)
 	channelId, data := p.McsSDin.Read(r)
 	core.ThrowIf(channelId != mcs.MCS_CHANNEL_GLOBAL, "invalid channel id")
 	glog.Debugf("mcs read: [%v] %v - %x", channelId, len(data), data)

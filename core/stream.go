@@ -4,12 +4,11 @@ import (
 	"bufio"
 	"crypto/rsa"
 	"crypto/tls"
+	"encoding/asn1"
 	"fmt"
+	"github.com/Hypdncy/gordp/glog"
 	"net"
 	"time"
-
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/huin/asn1ber"
 )
 
 type Stream struct {
@@ -54,7 +53,7 @@ func (s *Stream) SwitchSSL() {
 func (s *Stream) PubKey() []byte {
 	if c, ok := s.c.(*tls.Conn); ok {
 		pub := c.ConnectionState().PeerCertificates[0].PublicKey.(*rsa.PublicKey)
-		data, err := asn1ber.Marshal(*pub)
+		data, err := asn1.Marshal(*pub)
 		ThrowError(err)
 		return data
 	}

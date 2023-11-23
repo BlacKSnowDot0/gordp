@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/md5"
 	"crypto/rc4"
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -192,7 +192,7 @@ func NewAuthenticateMessage(user, pass string) *AuthenticateMessage {
 }
 
 //
-//func NewAuthenticateMessage(negFlag uint32, domain, user, workstation []byte,
+// func NewAuthenticateMessage(negFlag uint32, domain, user, workstation []byte,
 //	lmchallResp, ntchallResp, enRandomSessKey []byte) *AuthenticateMessage {
 //	msg := &AuthenticateMessage{}
 //	msg.Must.Signature = [8]byte{'N', 'T', 'L', 'M', 'S', 'S', 'P', 0x00}
@@ -217,4 +217,4 @@ func NewAuthenticateMessage(user, pass string) *AuthenticateMessage {
 //	}
 //	msg.Optional.Payload = buff.Bytes()
 //	return msg
-//}
+// }

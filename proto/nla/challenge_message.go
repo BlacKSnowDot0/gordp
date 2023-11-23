@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 	"io"
 	"time"
 )
@@ -61,7 +61,7 @@ func (m *ChallengeMessage) Read(r io.Reader) {
 	m.Load(bytes.NewReader(req.NegoTokens[0].Data))
 }
 
-//func (m *ChallengeMessage) Read(r *bytes.Reader) error {
+// func (m *ChallengeMessage) Read(r *bytes.Reader) error {
 //	if err := binary.Read(r, binary.LittleEndian, &m.Must); err != nil {
 //		return err
 //	}
@@ -74,7 +74,7 @@ func (m *ChallengeMessage) Read(r io.Reader) {
 //	m.Optional.Payload = make([]byte, r.Len())
 //	_, err := io.ReadFull(r, m.Optional.Payload)
 //	return err
-//}
+// }
 
 func (m *ChallengeMessage) getTargetName() []byte {
 	return m.GetField(m.Optional.Payload, m.BaseLen(), &m.Must.TargetName)

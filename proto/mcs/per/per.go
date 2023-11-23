@@ -2,8 +2,8 @@ package per
 
 import (
 	"fmt"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
 	"io"
 )
 
@@ -69,7 +69,7 @@ func WriteNumericString(w io.Writer, numStr string, minValue int) {
 		if i+1 < length {
 			c2 = int(numStr[i+1])
 		}
-		//c2 := core.If((i+1) < length, numStr[i+1], 0x30)
+		// c2 := core.If((i+1) < length, numStr[i+1], 0x30)
 		c1 = (c1 - 0x30) % 10
 		c2 = (c2 - 0x30) % 10
 		num := (c1 << 4) | uint8(c2)

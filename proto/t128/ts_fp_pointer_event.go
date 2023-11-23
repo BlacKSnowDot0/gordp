@@ -3,9 +3,9 @@ package t128
 import (
 	"bytes"
 
-	"github.com/GoFeGroup/gordp/glog"
+	"github.com/Hypdncy/gordp/glog"
 
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 )
 
 const (

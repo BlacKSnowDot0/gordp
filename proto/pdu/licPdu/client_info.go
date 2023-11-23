@@ -2,11 +2,11 @@ package licPdu
 
 import (
 	"bytes"
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/glog"
-	"github.com/GoFeGroup/gordp/proto/mcs"
-	"github.com/GoFeGroup/gordp/proto/sec"
-	"github.com/GoFeGroup/gordp/proto/x224"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/glog"
+	"github.com/Hypdncy/gordp/proto/mcs"
+	"github.com/Hypdncy/gordp/proto/sec"
+	"github.com/Hypdncy/gordp/proto/x224"
 	"io"
 )
 
@@ -20,7 +20,7 @@ type ClientInfoPDU struct {
 
 func NewClientInfoPDU(userId uint16, username, password string) *ClientInfoPDU {
 	infoPkt := &TsInfoPacket{
-		//Flag: INFO_MOUSE | INFO_UNICODE | INFO_LOGONERRORS | INFO_MAXIMIZESHELL |
+		// Flag: INFO_MOUSE | INFO_UNICODE | INFO_LOGONERRORS | INFO_MAXIMIZESHELL |
 		//	INFO_ENABLEWINDOWSKEY | INFO_DISABLECTRLALTDEL | INFO_MOUSE_HAS_WHEEL |
 		//	INFO_FORCE_ENCRYPTED_CS_PDU | INFO_AUTOLOGON,
 		Flag:           INFO_MOUSE | INFO_UNICODE | INFO_LOGONNOTIFY | INFO_LOGONERRORS | INFO_DISABLECTRLALTDEL | INFO_ENABLEWINDOWSKEY | INFO_AUTOLOGON,

@@ -1,8 +1,8 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/proto/capability"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/proto/capability"
 	"io"
 )
 

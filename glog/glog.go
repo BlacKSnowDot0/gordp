@@ -18,7 +18,7 @@ const (
 
 var (
 	logger *log.Logger
-	level  = DEBUG
+	level  = NONE
 )
 
 func init() {

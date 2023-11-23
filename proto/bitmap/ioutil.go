@@ -2,7 +2,7 @@ package bitmap
 
 import (
 	"encoding/binary"
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 

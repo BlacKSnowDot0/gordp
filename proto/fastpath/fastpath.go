@@ -3,8 +3,8 @@ package fastpath
 import (
 	"io"
 
-	"github.com/GoFeGroup/gordp/core"
-	"github.com/GoFeGroup/gordp/proto/mcs/per"
+	"github.com/Hypdncy/gordp/core"
+	"github.com/Hypdncy/gordp/proto/mcs/per"
 )
 
 type Header struct {
@@ -37,9 +37,9 @@ type FastPathData struct {
 func Read(r io.Reader) *FastPathData {
 	fp := &FastPathData{}
 	fp.Header.Read(r)
-	//glog.Debugf("fastpath read header: %+v", fp.Header)
+	// glog.Debugf("fastpath read header: %+v", fp.Header)
 	fp.Data = core.ReadBytes(r, fp.Header.Length)
-	//glog.Debugf("fastpath read data: %v - %x", len(fp.Data), fp.Data)
+	// glog.Debugf("fastpath read data: %v - %x", len(fp.Data), fp.Data)
 	return fp
 }
 

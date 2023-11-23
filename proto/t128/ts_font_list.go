@@ -1,7 +1,7 @@
 package t128
 
 import (
-	"github.com/GoFeGroup/gordp/core"
+	"github.com/Hypdncy/gordp/core"
 	"io"
 )
 
@@ -10,12 +10,12 @@ import (
 type TsFontListPDU struct {
 	NumberFonts   uint16
 	TotalNumFonts uint16
-	ListFlags     uint16 //This field SHOULD be set to 0x0003
-	EntrySize     uint16 //This field SHOULD be set to 0x0032 (50 bytes).
+	ListFlags     uint16 // This field SHOULD be set to 0x0003
+	EntrySize     uint16 // This field SHOULD be set to 0x0032 (50 bytes).
 }
 
 func (t *TsFontListPDU) Read(r io.Reader) DataPDU {
-	//TODO implement me
+	// TODO implement me
 	panic("implement me")
 }
 
