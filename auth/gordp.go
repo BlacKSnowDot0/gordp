@@ -36,9 +36,11 @@ func NewClient(opt *Option) *Client {
 			ConnectTimeout: opt.ConnectTimeout,
 		},
 	}
+
 	if c.option.ConnectTimeout == 0 {
 		c.option.ConnectTimeout = 5 * time.Second
 	}
+
 	return c
 }
 
@@ -49,6 +51,10 @@ func (c *Client) Connect() error {
 		defer func() { c.Close() }()
 		c.stream = core.NewStream(c.option.Addr, c.option.ConnectTimeout)
 		c.negotiation()
+		c.basicSettingsExchange()
+		c.channelConnect()
+		c.sendClientInfo()
+		c.readLicensing()
 	})
 }
 

@@ -1,6 +1,7 @@
 package auth
 
 import (
+	"fmt"
 	"github.com/BlackSnowDot0/gordp/core"
 	"github.com/BlackSnowDot0/gordp/glog"
 	"github.com/BlackSnowDot0/gordp/proto/nla"
@@ -62,6 +63,8 @@ func (c *Client) negotiation() {
 	default:
 		core.Throw("invalid protocol")
 	}
+
+	fmt.Println("ProtocolNeg.Result:", resPdu.ProtocolNeg.Result)
 
 	c.selectProtocol = resPdu.ProtocolNeg.Result
 }
