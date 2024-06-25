@@ -3,10 +3,10 @@ package conn
 import (
 	"time"
 
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/bitmap"
-	"github.com/Hypdncy/gordp/proto/t128"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/bitmap"
+	"github.com/BlackSnowDot0/gordp/proto/t128"
 )
 
 type Option struct {

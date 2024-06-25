@@ -1,8 +1,8 @@
 package conn
 
 import (
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/pdu/mcsPdu"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/pdu/mcsPdu"
 )
 
 func (c *Client) basicSettingsExchange() {

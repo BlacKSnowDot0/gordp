@@ -1,8 +1,8 @@
 package mcsPdu
 
 import (
-	"github.com/Hypdncy/gordp/proto/mcs"
-	"github.com/Hypdncy/gordp/proto/x224"
+	"github.com/BlackSnowDot0/gordp/proto/mcs"
+	"github.com/BlackSnowDot0/gordp/proto/x224"
 	"io"
 )
 

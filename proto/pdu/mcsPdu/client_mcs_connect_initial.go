@@ -2,9 +2,9 @@ package mcsPdu
 
 import (
 	"bytes"
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/mcs"
-	"github.com/Hypdncy/gordp/proto/x224"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/mcs"
+	"github.com/BlackSnowDot0/gordp/proto/x224"
 	"io"
 )
 

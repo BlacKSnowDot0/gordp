@@ -6,7 +6,7 @@ import (
 	"crypto/tls"
 	"encoding/asn1"
 	"fmt"
-	"github.com/Hypdncy/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/glog"
 	"net"
 	"time"
 )

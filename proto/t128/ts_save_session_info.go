@@ -1,7 +1,7 @@
 package t128
 
 import (
-	"github.com/Hypdncy/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/glog"
 	"io"
 )
 

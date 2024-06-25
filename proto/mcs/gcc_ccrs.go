@@ -3,8 +3,8 @@ package mcs
 import (
 	"bytes"
 	"fmt"
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/proto/mcs/per"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/proto/mcs/per"
 	"io"
 )
 

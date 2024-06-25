@@ -17,12 +17,12 @@ func Random(size int) []byte {
 }
 
 func RandomString(size int) string {
-	buf := make([]byte, size, size)
-	max := big.NewInt(int64(chLen))
+	buf := make([]byte, size)
+	maxB := big.NewInt(int64(chLen))
 	for i := 0; i < size; i++ {
-		random, err := rand.Int(rand.Reader, max)
+		random, err := rand.Int(rand.Reader, maxB)
 		if err != nil {
-			mathrandom.Seed(time.Now().UnixNano())
+			mathrandom.New(mathrandom.NewSource(time.Now().UnixNano()))
 			buf[i] = character[mathrandom.Intn(chLen)]
 			continue
 		}

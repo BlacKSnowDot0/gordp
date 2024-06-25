@@ -1,10 +1,10 @@
 package conn
 
 import (
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/nla"
-	"github.com/Hypdncy/gordp/proto/pdu/connPdu"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/nla"
+	"github.com/BlackSnowDot0/gordp/proto/pdu/connPdu"
 )
 
 func (c *Client) switchNLA() {

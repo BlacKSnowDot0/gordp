@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/fastpath"
-	"github.com/Hypdncy/gordp/proto/mcs"
-	"github.com/Hypdncy/gordp/proto/x224"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/fastpath"
+	"github.com/BlackSnowDot0/gordp/proto/mcs"
+	"github.com/BlackSnowDot0/gordp/proto/x224"
 )
 
 type PDU interface {

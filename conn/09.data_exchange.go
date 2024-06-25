@@ -1,9 +1,9 @@
 package conn
 
 import (
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/t128"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/t128"
 )
 
 func (c *Client) readPdu() t128.PDU {

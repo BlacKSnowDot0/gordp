@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/md5"
 	"crypto/rc4"
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 	"io"
 )
 

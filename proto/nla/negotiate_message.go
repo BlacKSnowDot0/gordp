@@ -1,7 +1,7 @@
 package nla
 
 import (
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 	"io"
 )
 

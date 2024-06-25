@@ -2,9 +2,9 @@ package mcs
 
 import (
 	"bytes"
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/glog"
-	"github.com/Hypdncy/gordp/proto/mcs/ber"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/proto/mcs/ber"
 	"io"
 )
 

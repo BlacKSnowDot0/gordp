@@ -1,8 +1,8 @@
 package conn
 
 import (
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/proto/t128"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/proto/t128"
 )
 
 func (c *Client) sendClientFinalization() {

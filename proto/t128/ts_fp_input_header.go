@@ -3,7 +3,7 @@ package t128
 import (
 	"io"
 
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 )
 
 // action

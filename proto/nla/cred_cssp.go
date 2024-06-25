@@ -4,8 +4,8 @@ package nla
 
 import (
 	"encoding/asn1"
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/glog"
 	"io"
 )
 

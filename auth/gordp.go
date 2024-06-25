@@ -3,7 +3,7 @@ package auth
 import (
 	"time"
 
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 )
 
 type Option struct {

@@ -1,8 +1,8 @@
 package licPdu
 
 import (
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/proto/sec"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/proto/sec"
 	"io"
 )
 

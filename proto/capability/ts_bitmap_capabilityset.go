@@ -1,8 +1,8 @@
 package capability
 
 import (
-	"github.com/Hypdncy/gordp/core"
-	"github.com/Hypdncy/gordp/proto/mcs"
+	"github.com/BlackSnowDot0/gordp/core"
+	"github.com/BlackSnowDot0/gordp/proto/mcs"
 	"io"
 )
 

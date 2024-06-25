@@ -3,7 +3,7 @@ package nla
 import (
 	"bytes"
 	"crypto/rc4"
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 )
 
 type NTLMv2Security struct {

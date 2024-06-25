@@ -6,7 +6,7 @@ import (
 	"image/color"
 	"io"
 
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 )
 
 func decompressColorPlane(r io.Reader, w, h int) []byte {

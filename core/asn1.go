@@ -1,4 +1,3 @@
-// Package asn1 --- 辅助读取ASN1结构的数据
 package core
 
 import (

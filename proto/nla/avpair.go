@@ -2,7 +2,7 @@ package nla
 
 import (
 	"bytes"
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 	"io"
 )
 

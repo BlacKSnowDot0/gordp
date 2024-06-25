@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime/debug"
 
-	"github.com/Hypdncy/gordp/glog"
+	"github.com/BlackSnowDot0/gordp/glog"
 )
 
 func TryCatch(f func(), catch func(e any)) {

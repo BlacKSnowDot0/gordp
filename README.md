@@ -1,8 +1,8 @@
 # gordp
+
 RDP client by Golang
 
-Add RDP Auth Only module, use in brute
-
+Fine-Tuned for Brute
 
 ```diff
 + Bitmap [done]

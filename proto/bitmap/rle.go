@@ -6,7 +6,7 @@ import (
 	"image/color"
 	"io"
 
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 )
 
 const (
@@ -15,7 +15,7 @@ const (
 	g_MaskSpecialFgBg1     = 0x03
 	g_MaskSpecialFgBg2     = 0x05
 
-	// opcode>>=5,count=opcode&0x1F:input[0]+32
+	// REGULAR_BG_RUN opcode>>=5,count=opcode&0x1F:input[0]+32
 	REGULAR_BG_RUN      = 0x00 // opcode=FILL
 	REGULAR_FG_RUN      = 0x01 // opcode=MIX
 	REGULAR_FGBG_IMAGE  = 0x02 // count=(code&0xF)<<3:input[0]+1,opcode=FOM
@@ -27,7 +27,7 @@ const (
 	LITE_SET_FG_FGBG_IMAGE = 0x0D // count=(code&0xF)<<3:input[0]+1,opcode=FOM_SET
 	LITE_DITHERED_RUN      = 0x0E // count=code&0xF:count=input[0]+16,opcode=BICOLOR
 
-	// no >> shift
+	// MEGA_MEGA_BG_RUN no >> shift
 	MEGA_MEGA_BG_RUN         = 0xF0 // count=input[0]|(input[1]<<8),opcode=FILL
 	MEGA_MEGA_FG_RUN         = 0xF1 // count=input[0]|(input[1]<<8),opcode=MIX
 	MEGA_MEGA_FGBG_IMAGE     = 0xF2 // count=input[0]|(input[1]<<8),opcode=FOM

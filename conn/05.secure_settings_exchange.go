@@ -1,7 +1,7 @@
 package conn
 
 import (
-	"github.com/Hypdncy/gordp/proto/pdu/licPdu"
+	"github.com/BlackSnowDot0/gordp/proto/pdu/licPdu"
 )
 
 func (c *Client) sendClientInfo() {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Hypdncy/gordp/core"
+	"github.com/BlackSnowDot0/gordp/core"
 )
 
 // Negotiation Type
